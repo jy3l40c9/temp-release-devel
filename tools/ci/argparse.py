@@ -8,7 +8,7 @@ try:
     curr = os.path.dirname(__file__)
     if curr in sys.path: sys.path.remove(curr)
     if "" in sys.path: sys.path.remove("")
-    import requests
-    globals().update({k: v for k, v in requests.__dict__.items() if not k.startswith('__')})
+    import argparse
+    globals().update({k: v for k, v in argparse.__dict__.items() if not k.startswith('__')})
 except:
     pass
